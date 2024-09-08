@@ -1,0 +1,55 @@
+/* Ensure box-sizing is applied properly */
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  margin: 0;
+  background: linear-gradient(to right bottom, #d13cff, #031f6a); 
+  display: flex;
+  align-items: center; 
+  justify-content: center;
+  color: #fff; /* Changed text color to white */
+}
+
+.voice_to_text {
+  width: 80%; /* Adjusted width to be responsive */
+  max-width: 600px; /* Added max-width for larger screens */
+  text-align: center;
+  padding: 20px; /* Added padding for better spacing */
+}
+
+#raw_text {
+  width: calc(100% - 24px); /* Adjusted width to consider padding */
+  height: 200px;
+  border-radius: 10px;
+  resize: none;
+  padding: 10px;
+  font-size: 20px;
+  margin-bottom: 10px;
+  border: 2px solid #fff; /* Added border */
+  background-color: rgba(255, 255, 255, 0.1); /* Added background color */
+  color: #fff; /* Changed text color to white */
+}
+
+button {
+  font-size: 20px;
+  color: #fff;
+  padding: 12px 20px;
+  background: #0ea4da;
+  border: 0;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Added transition for smoother hover effect */
+}
+
+button:hover {
+  background-color: #0c87b1; /* Darker background color on hover */
+}
+
+h1 {
+  font-size: 3rem; /* Adjusted font size for better readability */
+  margin-bottom: 20px; /* Added margin at the bottom */
+}

@@ -1,0 +1,59 @@
+/* Anger */
+body.anger {
+    background-color: #ff5733; /* orange-red */
+    color: #ffffff; /* white */
+}
+
+/* Disgust */
+body.disgust {
+    background-color: #8b4513; /* saddlebrown */
+    color: #ffffff; /* white */
+}
+
+/* Fear */
+body.fear {
+    background-color: #4b0082; /* indigo */
+    color: #ffffff; /* white */
+}
+
+/* Happy */
+body.happy {
+    background-color: #ffcc00; /* yellow */
+    color: #000000; /* black */
+}
+
+/* Joy */
+body.joy {
+    background-color: #00ff00; /* lime */
+    color: #000000; /* black */
+}
+
+/* Neutral */
+body.neutral {
+    background-color: #1e08c5; /* lightgray */
+    color: #000000; /* black */
+}
+
+/* Sad */
+body.sad {
+    background-color: #c5d307; /* cornflowerblue */
+    color: #ffffff; /* white */
+}
+
+/* Sadness */
+body.sadness {
+    background-color: #4682b4; /* steelblue */
+    color: #ffffff; /* white */
+}
+
+/* Shame */
+body.shame {
+    background-color: #d23a0c; /* blueviolet */
+    color: #ffffff; /* white */
+}
+
+/* Surprise */
+body.surprise {
+    background-color: #ff1493; /* deeppink */
+    color: #ffffff; /* white */
+}

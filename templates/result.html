@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Emotion Detection Result</title>
+    <link rel="stylesheet" type="text/css" href="/static/style.css">
+
+</head>
+<body>
+    <h1>Text Emotion Detection Result</h1>
+    <p><strong>Original Text:</strong> {{ raw_text }}</p>
+    <p><strong>Prediction:</strong> {{ prediction }} {{ emoji_icon }}</p>
+    <p><strong>Confidence:</strong> {{ max_probability }}</p>
+    <h2>Prediction Probability</h2>
+    <script type="text/javascript">
+      var predictedEmotion = "{{ predicted_emotion }}";
+  
+      // Log the value of predictedEmotion to the console
+      console.log("Predicted Emotion:", predictedEmotion);
+  
+      function changeTheme(emotion) {
+          var body = document.body;
+          body.classList.remove(
+              "anger",
+              "disgust",
+              "fear",
+              "happy",
+              "joy",
+              "neutral",
+              "sad",
+              "sadness",
+              "shame",
+              "surprise"
+          );
+          body.classList.add(emotion.toLowerCase());
+  
+          // Log the classes added to the body
+          console.log("Body classes:", body.classList);
+      }
+  
+      // Call the changeTheme function with the predicted emotion
+      changeTheme(predictedEmotion);
+  </script>
+  
+  
+</body>
+</html>

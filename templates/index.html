@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Emotion Detection</title>
+    <link rel="stylesheet" href="/static/styles_text.css">
+</head>
+<body>
+    <h1>Text Emotion Detection</h1>
+    <form action="/" method="post" id="textForm">
+        <label for="raw_text">Enter your text:</label><br>
+        <textarea id="raw_text" name="raw_text" rows="4" cols="50"></textarea><br><br>
+        <button type="button" id="click_to_convert">Voice to Text</button>
+        <button type="button" id="add_text">ADD &nbsp; <span>&#43;</span></button>
+        <input type="submit" value="Submit">
+    </form>
+    
+    <h1>Entries</h1>
+    <div class="entries-container">
+        {% for entry in entries %}
+            <div class="entry">
+                <p><strong>Text:</strong> {{ entry.raw_text }}</p>
+                <p><strong>Prediction:</strong> {{ entry.prediction }}</p>
+                <p><strong>Created At:</strong> {{ entry.created_at }}</p>
+            </div>
+        {% endfor %}
+    </div>
+
+    <!-- Container for added text -->
+    <div id="added_text_container"></div>
+
+    <script type="text/javascript" src="/static/scripts.js"></script>
+    <script>
+        document.getElementById('add_text').addEventListener('click', function() {
+            // Get the value of the textarea
+            var text = document.getElementById('raw_text').value;
+
+            // Create a new paragraph element
+            var paragraph = document.createElement('p');
+            paragraph.textContent = text;
+
+            // Append the paragraph to the container
+            document.getElementById('added_text_container').appendChild(paragraph);
+
+            // Clear the textarea
+            document.getElementById('raw_text').value = '';
+        });
+    </script>
+</body>
+</html>
